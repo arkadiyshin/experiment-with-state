@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/experiment-with-state/static/css/main.ab34508b.css",
+    "main.js": "/experiment-with-state/static/js/main.dcda6dff.js",
+    "index.html": "/experiment-with-state/index.html",
+    "main.ab34508b.css.map": "/experiment-with-state/static/css/main.ab34508b.css.map",
+    "main.dcda6dff.js.map": "/experiment-with-state/static/js/main.dcda6dff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab34508b.css",
+    "static/js/main.dcda6dff.js"
+  ]
+}
