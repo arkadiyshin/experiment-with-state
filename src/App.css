@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+body {
+    width: 80%;
+    margin: auto;
+    font-family: 'Grandstander', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imgContainer {
+    width: 120px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.imgContainer img {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.itemDescription {
+    padding-left: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leftContainer,
+.rightContainer {
+    display: flex;
+    align-items: center;
+}
+
+.itemContainer {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    margin-top: 25px;
+}
+
+.isFavorite {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg');
+    background-size: 100%;
+    align-self: flex-start;
+}
+
+.notFavorite {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg');
+    background-size: 100%;
+    align-self: flex-start;
 }
