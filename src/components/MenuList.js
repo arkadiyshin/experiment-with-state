@@ -3,12 +3,12 @@ import MenuItem from './MenuItem';
 
 function MenuList(props) {
 
-    const {foodItems, onClick, states} = props;
+    const {foodItems} = props;
 
     return (
         <div>
             {foodItems.map((item, index) => (
-                <MenuItem key={index} {...item} index={index} onClick={onClick} isFavoriteState={states[index]}/>
+                <MenuItem key={index} {...item} index={index}/>
             ))}
         </div>
     );

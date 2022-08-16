@@ -2,23 +2,19 @@ import React from 'react';
 import './App.css';
 import MenuList from './components/MenuList';
 import foodItems from './data.js';
-
+import MenuContext from "./context/MenuContext"
 
 
 function App() {
 
-  const [isFavoriteArray, setIsFavoriteArray] = React.useState(foodItems.map((item)=>item.isFavorite));
-
-  function onClick(index, isFavorite) {
-    setIsFavoriteArray(isFavoriteArray.map( (e, i) => (i === index) ? isFavorite : e ));
-  }
+  const [isFavoriteArray, setIsFavoriteArray] = React.useState(foodItems.map((item) => item.isFavorite));
 
   return (
     <div className="App">
       <h1>Wild Restaurant Menu</h1>
-      <MenuList
-        foodItems={foodItems} onClick={onClick} states={isFavoriteArray}
-      />
+      <MenuContext.Provider value={ {isFavoriteArray, setIsFavoriteArray} }>
+        <MenuList foodItems={foodItems} />
+      </MenuContext.Provider>
     </div>
   );
 }

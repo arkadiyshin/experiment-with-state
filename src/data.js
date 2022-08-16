@@ -12,7 +12,7 @@ const foodItems = [
         description: "Better than your nonna's! All local and fresh ingredients",
         foodImage: 'https://bit.ly/2GBnz1n',
         price: 15,
-        isFavorite: false
+        isFavorite: true
     },
     {
         itemName: 'Grilled Whole Fish',

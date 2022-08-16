@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext} from 'react';
+import MenuContext from '../context/MenuContext';
+
 
 function MenuItem(props) {
 
-    const {index, isFavoriteState, onClick} = props;
+    const { index } = props;
+    const { isFavoriteArray, setIsFavoriteArray } = useContext(MenuContext);
+    let isFavorite = isFavoriteArray[index];
 
     function handleClickFavorite() {
-        onClick(index, !isFavoriteState);
+        setIsFavoriteArray(isFavoriteArray.map( (e, i) => (i === index) ? !isFavorite : e ));
     }
 
     return (
@@ -22,7 +26,7 @@ function MenuItem(props) {
             <div className="rightContainer">
                 <div>{props.price} EUR</div>
 
-                <div id="favorite" className={isFavoriteState ? 'isFavorite' : 'notFavorite'}
+                <div id="favorite" className={isFavorite ? 'isFavorite' : 'notFavorite'}
                     onClick={handleClickFavorite}
                 />
             </div>
